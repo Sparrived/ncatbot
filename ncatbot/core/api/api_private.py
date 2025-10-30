@@ -47,13 +47,14 @@ class PrivateAPI(BaseAPI):
     # ---------------------
     # region 其它
     # ---------------------
-    async def set_input_status(self, status: int) -> None:
+    async def set_input_status(self, user_id: str, event_type: int) -> None:
         """设置输入状态
 
         Args:
-            status (int): 状态码, 0 表示 "对方正在说话", 1 表示 "对方正在输入"
+            user_id (str): 用户QQ号
+            event_type (int): 状态码, 0 表示 "对方正在说话", 1 表示 "对方正在输入"
         """
-        result = await self.async_callback("/set_input_status", {"status": status})
+        result = await self.async_callback("/set_input_status", {"user_id": user_id, "event_type": event_type})
         APIReturnStatus.raise_if_failed(result)
 
     # ---------------------
