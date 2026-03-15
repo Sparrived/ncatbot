@@ -1,4 +1,5 @@
-from ncatbot.core import BotClient, MessageEvent
+from ncatbot.app import BotClient
+from ncatbot.event import MessageEvent
 from ncatbot.utils import config
 from ncatbot.plugin_system import on_message
 

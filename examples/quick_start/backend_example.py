@@ -1,4 +1,4 @@
-from ncatbot.core import BotClient
+from ncatbot.app import BotClient
 from ncatbot.utils import config
 
 # 基础配置（示例）
